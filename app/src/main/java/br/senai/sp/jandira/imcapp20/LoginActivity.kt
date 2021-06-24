@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_Login_Activity.*
+import kotlinx.android.synthetic.main.activity_login_activity.*
 
 class LoginActivity : AppCompatActivity() {
 
@@ -17,7 +17,7 @@ class LoginActivity : AppCompatActivity() {
     lateinit var tvMensagemErro: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_Login_Activity)
+        setContentView(R.layout.activity_login_activity)
 
         val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
         val lembrar = dados.getBoolean("lembrar", false)
