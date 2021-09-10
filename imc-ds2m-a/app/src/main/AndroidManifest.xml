@@ -21,10 +21,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.ResultadoNcdActivity" />
-        <activity android:name=".NcdActivity" />
+        <activity android:name=".ui.NcdActivity" />
         <activity android:name=".ui.ResultadoImcActivity" />
         <activity android:name=".ui.ImcActivity" />
         <activity android:name=".ui.MainActivity" />
+        <activity android:name=".ui.DadosBiometria" />
 
         <meta-data
             android:name="preloaded_fonts"
