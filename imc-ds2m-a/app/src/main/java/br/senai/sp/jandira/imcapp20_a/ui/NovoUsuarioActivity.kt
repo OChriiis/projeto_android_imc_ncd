@@ -36,10 +36,10 @@ class NovoUsuarioActivity : AppCompatActivity() {
         }
 
         //Abrir um DatePikcerDialog
-        et_nivel_atividade.setOnClickListener{
+        et_data_nascimento.setOnClickListener{
             val dpd = DatePickerDialog(this,
                 DatePickerDialog.OnDateSetListener{view, _ano, _mes, _dia ->
-                et_nivel_atividade.setText("$_dia/${_mes + 1}/$_ano")
+                et_data_nascimento.setText("$_dia/${_mes + 1}/$_ano")
 
                     var diaZero = "$_dia"
                     var mesZero = "$_mes"
@@ -72,12 +72,12 @@ class NovoUsuarioActivity : AppCompatActivity() {
 
             //Gravar no banco de dados sqlite
             val usuario = Usuario(0,
-                et_peso.text.toString(),
+                et_email.text.toString(),
                 et_senha.text.toString(),
                 et_nome.text.toString(),
                 et_profissao.text.toString(),
                 et_altura.text.toString().toDouble(),
-                et_nivel_atividade.text.toString(),
+                et_data_nascimento.text.toString(),
                 'M',
             imageBitmap)
 
