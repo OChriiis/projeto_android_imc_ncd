@@ -14,8 +14,9 @@ class DadosBiometria : AppCompatActivity() {
         setContentView(R.layout.activity_dados_biometria)
 
         val btnGravar: Button = findViewById(R.id.bt_gravar)
-        val etPeso: EditText = findViewById(R.id.et_email)
+        val etPeso: EditText = findViewById(R.id.et_peso)
         val spinnerNivelAtividade: Spinner = findViewById(R.id.spinner_nivel_atv)
+        val et_data_nascimento: EditText = findViewById(R.id.et_data_nascimento)
     }
 
 }
