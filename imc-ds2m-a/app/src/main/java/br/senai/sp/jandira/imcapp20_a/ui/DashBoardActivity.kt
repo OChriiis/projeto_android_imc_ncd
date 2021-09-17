@@ -6,16 +6,22 @@ import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import br.senai.sp.jandira.imcapp20_a.R
 import br.senai.sp.jandira.imcapp20_a.utils.converterBase64ParaBitmap
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_dash_board.*
+import java.util.*
 
 class DashBoardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dash_board)
+
+    cv_pesar_agora.setOnClickListener{
+        abrirTelaBiometria()
+    }
 
         val caixaDeDialogo = AlertDialog.Builder(this)
         caixaDeDialogo.setTitle("Cadastro não finalizado!")
@@ -24,7 +30,7 @@ class DashBoardActivity : AppCompatActivity() {
             abrirTelaBiometria()
         }
         caixaDeDialogo.setNegativeButton("Não") { dialogInterface: DialogInterface, i: Int ->
-            finish()
+            closeContextMenu()
 
         }
         caixaDeDialogo.show()
@@ -69,6 +75,8 @@ class DashBoardActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
+
 
 
 }

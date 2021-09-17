@@ -72,7 +72,7 @@ class NovoUsuarioActivity : AppCompatActivity() {
 
             //Gravar no banco de dados sqlite
             val usuario = Usuario(0,
-                et_peso.text.toString(),
+                et_email.text.toString(),
                 et_senha.text.toString(),
                 et_nome.text.toString(),
                 et_profissao.text.toString(),
