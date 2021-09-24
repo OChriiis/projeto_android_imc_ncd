@@ -90,7 +90,7 @@
         android:background="@drawable/edit_text_login_background"
         android:ems="10"
         android:hint="Peso"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="@+id/et_nome"
         app:layout_constraintHorizontal_bias="0.0"
@@ -164,7 +164,7 @@
         android:drawableStart="@drawable/ic_lock_24"
         android:drawableTint="@color/colorAccent"
         android:gravity="center_vertical"
-        android:text="Dados Biométricos"
+        android:text="Dados Pessoais"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cl_header" />
@@ -177,7 +177,7 @@
         android:drawableStart="@drawable/user"
         android:drawableTint="@color/colorAccent"
         android:gravity="center_vertical"
-        android:text="Dados pessoais"
+        android:text="Dados Biometricos"
         app:layout_constraintEnd_toEndOf="@+id/et_senha"
         app:layout_constraintStart_toStartOf="@+id/et_senha"
         app:layout_constraintTop_toBottomOf="@+id/et_senha" />
@@ -203,8 +203,7 @@
         android:text="Salvar"
         app:layout_constraintBottom_toTopOf="@+id/cl_header"
         app:layout_constraintEnd_toEndOf="@+id/toolbar4"
-        app:layout_constraintTop_toTopOf="@+id/toolbar4"
-        app:layout_constraintVertical_bias="0.53999996" />
+        app:layout_constraintTop_toTopOf="@+id/toolbar4" />
 
     <TextView
         android:id="@+id/textView8"
@@ -215,9 +214,23 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/cl_header"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintEnd_toEndOf="@+id/bt_gravar"
         app:layout_constraintStart_toStartOf="@+id/toolbar4"
+        app:layout_constraintTop_toTopOf="@+id/toolbar4" />
+
+    <Button
+        android:id="@+id/bt_voltar"
+        style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#00F7F8FA"
+        android:drawableTop="@drawable/back_24"
+        android:drawableTint="@color/colorAccent"
+        android:text="Voltar"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/cl_header"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

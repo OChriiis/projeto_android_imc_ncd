@@ -6,6 +6,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.widget.Toast
 import br.senai.sp.jandira.imcapp20_a.R
 import br.senai.sp.jandira.imcapp20_a.dao.UsuarioDao
@@ -23,6 +24,9 @@ class NovoUsuarioActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_novo_usuario)
+
+//        supportActionBar!!.title = "Novo Usuário"
+//        supportActionBar!!.subtitle = "Cadastre seus dados"
 
         // Criar um calendário
         val calendario = Calendar.getInstance()
@@ -54,10 +58,13 @@ class NovoUsuarioActivity : AppCompatActivity() {
             dpd.show()
         }
 
+//        bt_voltar.setOnClickListener{
+//            val intent = Intent(this, LoginActivity::class.java)
+//            startActivity(intent)
+//        }
+
 
         bt_gravar.setOnClickListener {
-
-
             // *** Criar o sharedPreferences
 //            val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
 //
@@ -86,12 +93,16 @@ class NovoUsuarioActivity : AppCompatActivity() {
 
             Toast.makeText(this, "Dados gravados com sucesso!!", Toast.LENGTH_SHORT).show()
 
-
-
             finish()
 
         }
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu_novo_usuario, menu)
+        return true
     }
 
     private fun abrirGaleria() {

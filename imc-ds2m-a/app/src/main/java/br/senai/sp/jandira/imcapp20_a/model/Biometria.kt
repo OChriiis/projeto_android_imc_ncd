@@ -5,5 +5,7 @@ import java.time.LocalDate
 data class Biometria (
     var id: Int = 0,
     var peso: Double = 0.0,
-    var nivelAtividade: Int = 0,
-    var dataPesagem: String)
+    var nivelAtiviade: Int = 0,
+    var dataPesagem: String = LocalDate.now().toString(),
+    var usario: Int = 0
+)
