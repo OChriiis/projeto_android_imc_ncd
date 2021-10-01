@@ -2,13 +2,10 @@ package br.senai.sp.jandira.imcapp20_a.dao
 
 import android.content.ContentValues
 import android.content.Context
-import android.util.Log
 import android.widget.Toast
 import br.senai.sp.jandira.imcapp20_a.model.Biometria
 
-class BiometriaDao(
-    val context: Context,
-    val biometria: Biometria?) {
+class BiometriaDao(val context: Context, val biometria: Biometria?) {
 
     val dbHelper = ImcDataBase.getDatabase(context)
 
@@ -19,9 +16,9 @@ class BiometriaDao(
         // Determinar os dados que serão inseridos
         val dados = ContentValues()
         dados.put("peso", biometria!!.peso)
-        dados.put("nivel_atividade", biometria.nivelAtiviade)
+        dados.put("nivel_atividade", biometria.nivelAtividade)
         dados.put("data_pesagem", biometria.dataPesagem)
-        dados.put("id_usuario", biometria.usario)
+        dados.put("id_usario", biometria.usario)
 
         // Inserir os dados
         db.insert("tb_biometria", null, dados)
@@ -33,7 +30,7 @@ class BiometriaDao(
         editor.commit()
 
         db.close()
-        Toast.makeText(context, "Salvo com sucesso!", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "Salvo com sucesso!", Toast.LENGTH_LONG).show()
 
     }
 
@@ -47,7 +44,7 @@ class BiometriaDao(
             "peso",
             "nivel_atividade",
             "data_pesagem",
-            "id_usuario"
+            "id_usario"
         )
 
         // Determinar o filtro
@@ -79,7 +76,7 @@ class BiometriaDao(
             val bio = Biometria(
                 id = cursor.getInt(idIndex),
                 peso = cursor.getDouble(pesoIndex),
-                nivelAtiviade = cursor.getInt(nivelAtividadeIndex),
+                nivelAtividade = cursor.getString(nivelAtividadeIndex),
                 dataPesagem = cursor.getString(dataPesagemIndex),
                 usario = id
             )

@@ -27,7 +27,7 @@
         android:background="@drawable/edit_text_login_background"
         android:ems="10"
         android:hint="Peso"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="@+id/textView4"
